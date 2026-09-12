@@ -41,8 +41,7 @@ jobs:
       - name: Generate the site
         run: python build_site.py
 
-      - name: Keep the generated site
-        uses: actions/upload-artifact@v4
+      - name: Package the site for publishing
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: site
           path: dist
